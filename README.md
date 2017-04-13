@@ -6,24 +6,24 @@
     * _(done)_ Terminal Fundamentals 
     * _(done)_ Permissions, Redirection, and Piping 
     * Environment, Process, and Finding
-    * Advanced Terminal Commands
+    * (later) Advanced Terminal Commands
 * Git and Github
-    * _(already familiar)_ Git Basics 
+    * Git Basics 
     * Branching and Merging
-    * _(already familiar)_ Github Fundamentals 
-    * Advanced Git Commands
+    * Github Fundamentals 
+    * (later) Advanced Git Commands
 * HTML & CSS Basics
-    * _(already familiar)_ HTML Fundamentals
-    * _(already familiar)_ Semantic & Intermediate HTML
-    * _(already familiar)_ CSS Introduction
-    * _(already familiar)_ CSS Display
+    * HTML Fundamentals
+    * Semantic & Intermediate HTML
+    * CSS Introduction
+    * CSS Display
 * Intermediate CSS & Twitter Bootstrap
     * Transitions, Transforms, and Animations
     * Responsive Design
-    * _(already familiar)_ Twitter Bootstrap
+    * Twitter Bootstrap
     * Deploying Static Websites
 * Javascript Fundamentals 
-    * _(done)_ Javascript Introduction 
+    * Javascript Introduction 
     * Javascript Arrays
     * Javascript Objects
     * Javascript Functions
