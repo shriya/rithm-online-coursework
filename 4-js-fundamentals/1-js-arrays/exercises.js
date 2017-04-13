@@ -115,8 +115,6 @@ if ("pasta" in foodObj) {
 
 (2 < 3) ? console.log("yes") : console.log("no"); 
 
-*/ 
-
 
 var numFunction = function myFunction (a, b) {
 	return a + b;
@@ -126,8 +124,6 @@ myFunction(1, 3);
 
 
 function() {}
-
-
 
 // 
 
@@ -144,6 +140,17 @@ var example = (function() {
 		}
 	}
 })()
+
+*/ 
+
+
+
+
+
+
+
+
+
 
 
 
