@@ -8,8 +8,8 @@
     * Environment, Process, and Finding
     * (later) Advanced Terminal Commands
 * Git and Github
-    * Git Basics 
-    * Branching and Merging
+    * _(done)_ Git Basics 
+    * _(done)_ Branching and Merging
     * Github Fundamentals 
     * (later) Advanced Git Commands
 * HTML & CSS Basics
