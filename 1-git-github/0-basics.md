@@ -1,4 +1,4 @@
-{ Git Basics Exercises. }
+# { Git Basics Exercises. }
 
 mkdir learn_git_again
 cd learn_git_again
