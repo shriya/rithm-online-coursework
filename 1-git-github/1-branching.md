@@ -1,5 +1,6 @@
 # { Checkout and Reset. }
 
+~~~~
 mkdir destruction
 cd destruction
 git init
@@ -24,9 +25,11 @@ git reset --soft 65e3a93
 git add .
 git commit -m "Trying to commit again and again"
 git reset --hard 65e3a93
+~~~~
 
 # { Branching. }
 
+~~~~
 mkdir branch_time
 cd branch_time 
 git init
@@ -40,6 +43,7 @@ git commit -m "added best.txt"
 git checkout master
 git merge amazing_feature 
 git branch -D amazing_feature 
+~~~~
 
 # { Branching and Merging Exercises. }
 
