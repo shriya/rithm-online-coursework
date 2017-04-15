@@ -5,7 +5,7 @@
 * Terminal & UNIX
     * _(done)_ Terminal Fundamentals 
     * _(done)_ Permissions, Redirection, and Piping 
-    * Environment, Process, and Finding
+    * _(done)_ Environment, Process, and Finding
     * (later) Advanced Terminal Commands
 * Git and Github
     * _(done)_ Git Basics 
