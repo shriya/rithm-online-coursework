@@ -10,7 +10,7 @@
 * Git and Github
     * _(done)_ Git Basics 
     * _(done)_ Branching and Merging
-    * Github Fundamentals 
+    * _(half done exc. murder mystery)_ Github Fundamentals 
     * (later) Advanced Git Commands
 * HTML & CSS Basics
     * HTML Fundamentals
