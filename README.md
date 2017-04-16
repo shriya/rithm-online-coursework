@@ -10,12 +10,12 @@
 * Git and Github
     * _(done)_ Git Basics 
     * _(done)_ Branching and Merging
-    * _(half done exc. murder mystery)_ Github Fundamentals 
+    * _(done exc. murder mystery)_ Github Fundamentals 
     * (later) Advanced Git Commands
 * HTML & CSS Basics
-    * HTML Fundamentals
-    * Semantic & Intermediate HTML
-    * CSS Introduction
+    * _(done)_ HTML Fundamentals
+    * _(done)_ Semantic & Intermediate HTML
+    * _(done exc. rebuilt websites)_ CSS Introduction
     * CSS Display
 * Intermediate CSS & Twitter Bootstrap
     * Transitions, Transforms, and Animations
