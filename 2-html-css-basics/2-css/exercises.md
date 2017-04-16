@@ -8,7 +8,7 @@ _(completed CSS Diner)_
 
 (did not rebuild websites yet)
 
-#### other websites i've made:
+#### other websites i've made (used Bootstrap template and modified color scheme, fonts, and all information):
 
 http://harvardlgbtqconference.org/ 
 (made Jan-Feb 2017)
