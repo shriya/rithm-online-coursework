@@ -6,12 +6,12 @@
     * _(done)_ Terminal Fundamentals 
     * _(done)_ Permissions, Redirection, and Piping 
     * _(done)_ Environment, Process, and Finding
-    * (later) Advanced Terminal Commands
+    * _(later)_ Advanced Terminal Commands
 * Git and Github
     * _(done)_ Git Basics 
     * _(done)_ Branching and Merging
     * _(done exc. murder mystery)_ Github Fundamentals 
-    * (later) Advanced Git Commands
+    * _(later)_ Advanced Git Commands
 * HTML & CSS Basics
     * _(done)_ HTML Fundamentals
     * _(done)_ Semantic & Intermediate HTML
