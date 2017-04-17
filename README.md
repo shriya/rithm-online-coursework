@@ -23,7 +23,7 @@
     * Twitter Bootstrap
     * Deploying Static Websites
 * Javascript Fundamentals 
-    * Javascript Introduction 
+    * _(done)_ Javascript Introduction 
     * Javascript Arrays
     * Javascript Objects
     * Javascript Functions
