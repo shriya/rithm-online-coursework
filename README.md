@@ -24,7 +24,7 @@
     * Deploying Static Websites
 * Javascript Fundamentals 
     * _(done)_ Javascript Introduction 
-    * Javascript Arrays
+    * _(done)_ Javascript Arrays
     * Javascript Objects
     * Javascript Functions
 * Intermediate Javascript Part I
