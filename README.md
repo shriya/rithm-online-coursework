@@ -25,7 +25,7 @@
 * Javascript Fundamentals 
     * _(done)_ Javascript Introduction 
     * _(done)_ Javascript Arrays
-    * Javascript Objects
+    * _(done)_ Javascript Objects
     * Javascript Functions
 * Intermediate Javascript Part I
 	* Debugging Javascript
