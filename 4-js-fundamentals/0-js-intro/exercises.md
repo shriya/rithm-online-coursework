@@ -60,13 +60,17 @@ answer: it's the last definition of the var
 
 ### 3. Write some JavaScript that prompt's the user for their favorite color. Once the user has submitted a favorite color, log that color to the console along with a friendly message.
 
+~~~~ 
 var faveColor = prompt("What is your favorite color?");
 console.log(faveColor + " is such a beautiful color!");
+~~~~ 
 
 ### 4. Create a string that contains both single quotes and double quotes.
 
+~~~~ 
 var myQuote = 'My favorite quote is "We judge ourselves by what we feel capable of doing, while others judge us by what we have already done." by Henry Wadsworth Longfellow';
 console.log(myQuote);
+~~~~ 
 
 ### 5. What is the difference between null and undefined?
 
@@ -182,6 +186,7 @@ Yes; any integer other than 0 is a truthy value
 
 ### 1. Research Math.random here and write an if statement that console.log's "Over 0.5" if Math.random returns a number greater than 0.5. Otherwise console.log "Under 0.5".
 
+~~~~ 
 var myNum = Math.random()
 
 if (myNum > 0.5) {
@@ -189,6 +194,7 @@ if (myNum > 0.5) {
 } else {
 	console.log("Under 0.5");
 }
+~~~~ 
 
 ### 2. What is a falsey value? List all the falsey values in JavaScript.
 

@@ -45,7 +45,7 @@ sort vegetables.txt
 
 wc vegetables.txt 
 
->> 15      16     113 vegetables.txt 
+> 15 	16 	113 vegetables.txt 
 
 (15 lines)
 

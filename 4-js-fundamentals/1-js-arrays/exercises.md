@@ -2,27 +2,39 @@
 
 ### 1. Create an array of your favorite foods (call it favoriteFoods). Make sure it has at least three elements.
 
+~~~~ 
 var favoriteFoods = ["artichokes", "parmesan cheese", "sour cream & onion chips", "tandoori paneer", "gin"];
+~~~~ 
 
 ### 2. Access the second element in favoriteFoods.
 
+~~~~ 
 favoriteFoods[1];
+~~~~ 
 
 ### 3. Change the last element in favoriteFoods to some other food.
 
+~~~~ 
 favoriteFoods[favoriteFoods.length-1] = "licorice";
+~~~~ 
 
 ### 4. Remove the first element in favoriteFoods and store it in a variable called formerFavoriteFood.
 
+~~~~ 
 var formerFavoriteFood = favoriteFoods.shift();
+~~~~ 
 
 ### 5. Add a favorite food to the back of the favoriteFoods array.
 
+~~~~ 
 favoriteFoods.push("cookie dough ice cream");
+~~~~ 
 
 ### 6. Add a favorite food to the front of the favoriteFoods array.
 
+~~~~ 
 favoriteFoods.unshift("black olives");
+~~~~ 
 
 ### 7. What happens when you try to pop from an empty array?
 
@@ -34,22 +46,28 @@ It returns undefined and the array is still empty
 [2, 3, 4, 5] -> [2, 4, 5]
 ~~~~
 
+~~~~ 
 var arr1 = [2, 3, 4, 5];
 arr1.splice(1, 1);
+~~~~ 
 
 ~~~~
 ["alpha", "gamma", "delta"] -> ["alpha", "beta", "gamma", "delta"]
 ~~~~
 
+~~~~ 
 var arr2 = ["alpha", "gamma", "delta"];
 arr2.splice(1, 0, "beta");
+~~~~ 
 
 ~~~~
 [10,-10,-5,-3,2,1] -> [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 ~~~~
 
+~~~~ 
 var arr3 = [10,-10,-5,-3,2,1];
 arr3.splice(1, 3, 9, 8, 7, 6, 5, 4, 3);
+~~~~ 
 
 # { Array Methods. }
 
@@ -174,55 +192,77 @@ var people = ["Greg", "Mary", "Devon", "James"];
 
 ### 1. Using a loop, iterate through this array and console.log all of the people.
 
+~~~~ 
 for(i = 0; i < people.length; i++) {
 	console.log(people[i]);
 }
+~~~~ 
 
 ### 2. Write the command to remove "Greg" from the array.
 
+~~~~ 
 people.shift();
+~~~~ 
 
 ### 3. Write the command to remove "James" from the array.
 
+~~~~ 
 people.pop();
+~~~~ 
 
 ### 4. Write the command to add "Matt" to the front of the array.
 
+~~~~ 
 people.unshift("Matt");
+~~~~ 
 
 ### 5. Write the command to add your name to the end of the array.
 
+~~~~ 
 people.push("Shriya");
+~~~~ 
 
 ### 6. Using a loop, iterate through this array and after console.log-ing "Mary", exit from the loop.
 
+~~~~ 
 for (var i = 0; i < people.length; i++) {
 	console.log(people[i]);
 		if (people[i] === "Mary") {
 		break;
 	}
 } 
+~~~~ 
 
 ### 7. Write the command to make a copy of the array using slice. The copy should NOT include "Mary" or "Matt".
 
+~~~~ 
 var peopleCopy = people.slice(2, 4);
+~~~~ 
 
 ### 8. Write the command that gives the indexOf where "Mary" is located.
 
+~~~~ 
 people.indexOf("Mary");
+~~~~ 
 
 ### 9. Write the command that gives the indexOf where "Foo" is located (this should return -1).
 
+~~~~ 
 people.indexOf("Foo");
+~~~~ 
 
 ### 10. Redefine the people variable with the value you started with. Using the splice command, remove "Devon" from the array and add "Elizabeth" and "Artie". Your array should look like this when you are done ["Greg", "Mary", "Elizabeth", "Artie", "James"].
 
+~~~~ 
 var people = ["Greg", "Mary", "Devon", "James"];
 people.splice(2, 1, "Elizabeth", "Artie");
+~~~~ 
 
 ### 11. Create a new variable called withBob and set it equal to the people array concatenated with the string of "Bob".
 
+~~~~ 
 var withBob = people.concat("Bob");
+~~~~ 
 
 
 
