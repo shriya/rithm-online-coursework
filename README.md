@@ -26,7 +26,7 @@
     * _(done)_ Javascript Introduction 
     * _(done)_ Javascript Arrays
     * _(done)_ Javascript Objects
-    * Javascript Functions
+    * _(done)_ Javascript Functions
 * Intermediate Javascript Part I
 	* Debugging Javascript
 	* Nested Data Structures

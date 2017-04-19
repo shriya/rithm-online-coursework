@@ -622,7 +622,17 @@ multipleLetterCount("hello"); // {h:1, e: 1, l: 2, o:1}
 multipleLetterCount("person"); // {p:1, e: 1, r: 1, s:1, o:1, n:1}
 ~~~~
 
-
+function multipleLetterCount(str) {
+	var myObj = {};
+	for (var i = 0; i < str.length; i++) {
+		if (myObj[str[i]] === undefined) {
+			myObj[str[i]] = 1;
+		} else {
+			myObj[str[i]] += 1;
+		}
+	}
+	return myObj;
+}
 
 ### 2. arrayManipulation
 
@@ -639,6 +649,22 @@ arrayManipulation([1,2,3], "add", "beginning", 20); // [20,1,2,3]
 arrayManipulation([1,2,3], "add", "end", 30); // [1,2,3,30]
 ~~~~
 
+function arrayManipulation(arr, com, loc, val) {
+	if (com === "remove") {
+		if (loc === "end") {
+			return arr.pop();
+		} else if (loc === "beginning") {
+			return arr.unshift();
+		}
+	} else if (com === "add") {
+		if (loc === "end") {
+			return arr.push(val);
+		} else if (loc === "beginning") {
+			return arr.shift(val);
+		}
+	}
+}
+
 ### 3. isPalindrome
 
 * A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This function should take in one parameter and returns true or false if it is a palindrome. As a bonus, allow your function to ignore whitespace and capitalization so that isPalindrome('a man a plan a canal Panama'); returns true
@@ -650,13 +676,65 @@ isPalindrome('hannah'); // true
 isPalindrome('robert'); // false
 ~~~~
 
+function isPalindrome(str) {
+	var reversedStr = str.split("").reverse().join("");
+	if (str === reversedStr) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 ## Part 3
 
 ### 1. Rock / Paper / Scissor
 
 * using your knowledge so far, build a game of Rock/Paper/Scissor where through the use of the prompt function, a user can enter their choice and based on a random selection - they can either tie/win or lose against a computer.
 
+(function() {
+	var options = ["Rock", "Paper", "Scissors"];
+	console.log ("Welcome to Rock, Paper, Scissors. Type 'stop' as an answer to the prompt to exit the game.");
+	do {
+		var result = prompt("Rock, Paper, or Scissors?");
+		var computerResult = options[Math.floor(Math.random() * options.length)];
 
+		if (computerResult === "Rock") {
+			if (result.toLowerCase() === "rock") {
+				console.log("The computer chose Rock");
+				console.log("You tied!");
+			} else if (result.toLowerCase() === "paper") {
+				console.log("The computer chose Rock");
+				console.log("You won!");
+			} else if (result.toLowerCase() === "scissors") {
+				console.log("The computer chose Rock");
+				console.log("You lost!");
+			} 
+		} else if (computerResult === "Paper") {
+			if (result.toLowerCase() === "rock") {
+				console.log("The computer chose Paper");
+				console.log("You lost!");
+			} else if (result.toLowerCase() === "paper") {
+				console.log("The computer chose Paper");
+				console.log("You tied!");
+			} else if (result.toLowerCase() === "scissors") {
+				console.log("The computer chose Paper");
+				console.log("You won!");
+			} 
+		} else {
+			if (result.toLowerCase() === "rock") {
+				console.log("The computer chose Scissors");
+				console.log("You won!");
+			} else if (result.toLowerCase() === "paper") {
+				console.log("The computer chose Scissors");
+				console.log("You lost!");
+			} else if (result.toLowerCase() === "scissors") {
+				console.log("The computer chose Scissors");
+				console.log("You tied!");
+			}
+		}
+	} while (result !== "stop");
+	console.log("Thanks for playing!");
+})();
 
 
 
