@@ -21,9 +21,6 @@ var sayHi = function(name){
 }
 ~~~~
 
-### 4-js / 3-js / { Hoisting } exercises
-
-* last two don't have a ; at the end of line sayHi()
 
 
 

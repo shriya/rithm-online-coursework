@@ -18,7 +18,7 @@
     * _(done exc. rebuilt websites)_ CSS Introduction
     * _(done exc. flexbox exercises)_ CSS Display
 * Intermediate CSS & Twitter Bootstrap
-    * Transitions, Transforms, and Animations
+    * _(done)_ Transitions, Transforms, and Animations
     * Responsive Design
     * Twitter Bootstrap
     * Deploying Static Websites
@@ -32,7 +32,7 @@
 	* Nested Data Structures
 	* Higher Order Functions, Timers, and Closures
 	* Document Object Model
-* Intermediate Javascript Part II
+* Intermediate Javascript Part II (Exercises not due Day 1)
 	* Intro to jQuery
 	* Intermediate jQuery
 	* How the Web Works
