@@ -377,7 +377,9 @@ function onlyCapitalLetters(str) {
 ### 1. Write a function called displayFullName, which should accept two parameters, firstName and lastName. The function should be immediately invoked and return the firstName + lastName. You should NOT have to call this function, it should invoke right away.
 
 ~~~~
-
+(function(firstName, lastName) {
+	return firstName + " " + lastName;
+})("Shriya", "Nevatia");
 ~~~~
 
 ### 2. Write a function called createCalculator, which should return an object that has four methods, add, subtract, multiply and divide.
@@ -391,8 +393,299 @@ calc.divide(12,2); // 6
 ~~~~
 
 ~~~~
+function createCalculator() {
+	return {
+		add: function(a, b) {
+			return a + b;
+		},
+		subtract: function (x, y) {
+			return x - y;
+		}, 
+		multiply: function(m, n) {
+			return m * n;
+		},
+		divide: function (u, v) {
+			return u / v;
+		}
+	}
+}
+~~~~
+
+# { Hoisting. }
+
+### 1. What does the following code output? Why?
 
 ~~~~
+var firstName = 'Elie';
+
+function displayFirstName(){
+    var firstName = 'Tim';
+    return firstName;
+}
+
+displayFirstName(); // ?
+~~~~
+
+firstName is hoisted to the top of the program but is undefined, as is displayFirstName() (for the moment, also undefined). Inside displayFirstName(), firstName is declared but undefined. Now once the assignments are executed, the function is called and returns 'Tim', since that is the local variable that was created, assigned, and the function was invoked.
+
+### 2. What does the following code output? Why?
+
+~~~~
+function displayFirstName(){
+    var firstName = 'Tim';
+    return firstName;
+}
+
+displayFirstName();
+
+console.log(firstName) // ?
+~~~~
+
+The function displayFirstName() is declared but not defined, initially. Within the function, the variable firstName is also declared but not defined. Now the program can execute the actual definitions; displayFirstName() is defined, and firstName within the function is assigned to "Tim". The program invokes displayFirstName() and returns "Tim", then the console.log line throws and error because there is no variable firstName that's visible in the global scope.
+
+### 3. What does the following code output? Why?
+
+~~~~
+console.log(firstName) // ?
+var firstName = "Elie"
+~~~~
+
+It outputs undefined because the variable firstName is declared via hoisting when the program begins to run, but it's logged to the console before being assigned to the string "Elie".
+
+### 4. What does the following code output? Why?
+
+~~~~
+console.log(firstName) // ?
+firstName = 'Elie'
+~~~~
+
+The program outputs an error (as a self-contained program unrelated to previous examples) because the variable firstName does not exist and was never declared.
+
+### 5. What does the following code output? Why?
+
+~~~~
+function sayHi(){
+    return 'Hi ' + firstName;
+    var firstName = 'Elie'
+}
+
+sayHi(); // ?
+~~~~
+
+The function sayHi() is declared but not defined, and within it the variable firstName is also declared but not defined. Then the program begins to run -- the function is defined, then it's invoked in the line sayHi(); -- but firstName corresponds to undefined, not "Elie", so the function returns "Hi undefined".
+
+### 6. What does the following code output? Why?
+
+~~~~
+function sayHi(){
+    return 'Hi ' + firstName; 
+    firstName = 'Elie'
+}
+
+sayHi(); // ?
+~~~~
+
+The function sayHi() is declared but not defined, but the variable firstName is never declared. This means that once the program begins to run (the line sayHi();), it will throw an error because firstName was never initialized. 
+
+### 7. What does the following code output? Why?
+
+~~~~
+sayHi() // ?
+
+function sayHi(){
+    return 'Hi!';
+}
+~~~~
+
+The function definition is hoisted to the top, so this will return "Hi!"
+
+### 8. What does the following code output? Why?
+
+~~~~
+sayHi() // ?
+
+var sayHi = function(){
+    return 'Hi!';
+}
+~~~~
+
+The function sayHi is created via hoisting but its value is undefined. It will return an error because we are trying to call undefined as if it is a function (with the () after sayHi)
+
+*** 
+
+# { Functions Exercises. } 
+
+## Part 1
+
+### 1. difference
+
+* this function takes in two parameters and returns the difference of the two;
+
+~~~~
+difference(2,2); // 0
+difference(0,2); // -2
+~~~~
+
+function difference(x, y) {
+	return x - y;
+}
+
+### 2. product
+
+* this function takes in two parameters and returns the product of the two;
+
+~~~~
+product(2,2); // 4
+product(0,2); // 0
+~~~~
+
+function product(x , y) {
+	return x * y;
+}
+
+### 3. printDay
+
+* this function takes in one parameter (a number from 1-7) and returns the day of the week (1 is Sunday, 2 is Monday, 3 is Tuesday etc.). If the number is less than 1 or greater than 7, the function should return undefined;
+
+~~~~
+printDay(4); // "Wednesday"
+printDay(41); // undefined
+~~~~
+
+function printDay(num) {
+	var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	if (days[num - 1] !== undefined) {
+		return days[num - 1];
+	}
+}
+
+### 4. lastElement
+
+* this function takes in one parameter (an array) and returns the last value in the array. It should return undefined if the array is empty.
+
+~~~~
+lastElement([1,2,3,4]); // 4
+lastElement([]); // undefined
+~~~~
+
+function lastElement(arr) {
+	return arr[arr.length - 1];	
+}
+
+### 5. numberCompare
+
+* this function takes in two parameters (both numbers). If the first is greater than the second, this function returns "First is greater". If the second number is greater than the first, the function returns "Second is greater". Otherwise the function returns "Numbers are equal"
+
+~~~~
+numberCompare(1,1); // "Numbers are equal"
+numberCompare(2,1); // "First is greater"
+numberCompare(1,2); // "Second is greater"
+~~~~
+
+function numberCompare(x, y) {
+	if (x === y) {
+		return "Numbers are equal";
+	} else if (x > y) {
+		return "First is greater";
+	} else {
+		return "Second is greater";
+	}
+}
+
+### 6. singleLetterCount
+
+* this function takes in two parameters (two strings). The first parameter should be a word and the second should be a letter. The function returns the number of times that letter appears in the word. The function should be case insensitive (does not matter if the input is lowercase or uppercase). If the letter is not found in the word, the function should return 0.
+
+~~~~
+singleLetterCount('amazing','A'); // 2
+singleLetterCount('Rithm School','o'); // 2
+~~~~
+
+function singleLetterCount(str, chr) {
+	var count = 0;
+	for (var i = 0; i < str.length; i++) {
+		if(str[i].toLowerCase() === chr.toLowerCase()) {
+			count += 1;
+		}
+	}
+	return count;
+}
+
+## Part 2
+
+### 1. multipleLetterCount
+
+this function takes in one parameter (a string) and returns an object with the keys being the letters and the values being the count of the letter.
+
+~~~~
+multipleLetterCount("hello"); // {h:1, e: 1, l: 2, o:1}
+multipleLetterCount("person"); // {p:1, e: 1, r: 1, s:1, o:1, n:1}
+~~~~
+
+
+
+### 2. arrayManipulation
+
+* this function should take in at most four parameters (an array, command, location, and value).
+  * If the command is "remove" and the location is "end", the function should remove the last value in the array and return the value removed. (In this case, the function only needs three arguments.)
+  * If the command is "remove" and the location is "beginning", the function should remove the first value in the array and return the value removed. (In this case, the function only needs three arguments.)
+  * If the command is "add" and the location is "beginning", the function should add the value (fourth parameter) to the beginning of the array and return the array.
+  * If the command is "add" and the location is "end", the function should add the value (fourth parameter) to the end of the array and return the array.
+
+~~~~
+arrayManipulation([1,2,3], "remove", "end"); // 3
+arrayManipulation([1,2,3], "remove", "beginning"); // 1
+arrayManipulation([1,2,3], "add", "beginning", 20); // [20,1,2,3]
+arrayManipulation([1,2,3], "add", "end", 30); // [1,2,3,30]
+~~~~
+
+### 3. isPalindrome
+
+* A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This function should take in one parameter and returns true or false if it is a palindrome. As a bonus, allow your function to ignore whitespace and capitalization so that isPalindrome('a man a plan a canal Panama'); returns true
+
+~~~~
+isPalindrome('testing'); // false
+isPalindrome('tacocat'); // true
+isPalindrome('hannah'); // true
+isPalindrome('robert'); // false
+~~~~
+
+## Part 3
+
+### 1. Rock / Paper / Scissor
+
+* using your knowledge so far, build a game of Rock/Paper/Scissor where through the use of the prompt function, a user can enter their choice and based on a random selection - they can either tie/win or lose against a computer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
