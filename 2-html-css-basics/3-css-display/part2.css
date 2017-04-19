@@ -1,20 +1,33 @@
-body {
-  background-color: #5ccdfd;
+#container {
+	margin: 0 auto;
+	width: 640px;
 }
 
-p, ul {
-  font-family: "Arial";
+.red-sm {
+	width: 25%;
+	height: 150px;
+	float: left;
+	margin: 2%;
+	background-color: red;
+	border: 2px solid black;
 }
 
-ul {
-  text-align: center;
-  list-style-type: none;
+.blue-md {
+	width: 65%;
+	height: 150px;
+	float: right;
+	margin: 2%;
+	background-color: blue;
+	border: 2px solid black;
 }
 
-ul li::first-letter {
-  font-size: 200%;
+.yel-lg {
+	clear: both;
+	width: 95%;
+	height: 150px;
+	margin: 2.5%;
+	background-color: yellow;
+	border: 2px solid black;
 }
-
-
 
 

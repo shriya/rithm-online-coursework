@@ -1,20 +1,23 @@
-body {
-  background-color: #5ccdfd;
+.container {
+	
 }
 
-p, ul {
-  font-family: "Arial";
+#purple {
+	background-color: purple;
+    height: 100px;
 }
 
-ul {
-  text-align: center;
-  list-style-type: none;
+#red {
+	background-color: red;
+    height: 200px;
 }
 
-ul li::first-letter {
-  font-size: 200%;
+#green {
+ 	background-color: green;
+    height: 200px;
 }
 
-
-
-
+#orange {
+	background-color: orange;
+    height: 200px;
+}

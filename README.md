@@ -16,7 +16,7 @@
     * _(done)_ HTML Fundamentals
     * _(done)_ Semantic & Intermediate HTML
     * _(done exc. rebuilt websites)_ CSS Introduction
-    * CSS Display
+    * _(partially done)_ CSS Display
 * Intermediate CSS & Twitter Bootstrap
     * Transitions, Transforms, and Animations
     * Responsive Design
