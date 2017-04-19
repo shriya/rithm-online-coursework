@@ -1,23 +1,37 @@
 .container {
-	
+	width: 490px;
+	height: 500px;
+	margin: 0 auto;
 }
 
 #purple {
 	background-color: purple;
-    height: 100px;
+    height: 150px;
+    width: 469px;
+    margin: 10px 10px 5px 10px;
+    display: inline-block;
+}
+
+#red, #green, #orange {
+	height: 470px;
+
+	/* why isn't this adding up to 500 width?! */ 
+	width: 147px; 
+
+    margin: 5px 5px 10px 5px; 
+    display: inline-block;
 }
 
 #red {
 	background-color: red;
-    height: 200px;
+	margin-left: 10px;
 }
 
 #green {
- 	background-color: green;
-    height: 200px;
+	background-color: green;
 }
 
 #orange {
 	background-color: orange;
-    height: 200px;
+	margin-right: 10px;
 }

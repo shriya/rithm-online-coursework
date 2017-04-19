@@ -16,7 +16,7 @@
     * _(done)_ HTML Fundamentals
     * _(done)_ Semantic & Intermediate HTML
     * _(done exc. rebuilt websites)_ CSS Introduction
-    * _(partially done)_ CSS Display
+    * _(done exc. flexbox exercises)_ CSS Display
 * Intermediate CSS & Twitter Bootstrap
     * Transitions, Transforms, and Animations
     * Responsive Design
@@ -39,6 +39,21 @@
 	* AJAX with jQuery
 	* Javascript Iterators
 	* Final Project
+
+*** 
+
+### Questions 
+
+* 2-html / 3-css / part3.css 
+    why isn't this adding up to 500 width?!
+    looks like there's some margin being added mysteriously around all elements
+
+* 2-html / 3-css / part4.css 
+    this also doesn't add up
+
+
+
+
 
 
 

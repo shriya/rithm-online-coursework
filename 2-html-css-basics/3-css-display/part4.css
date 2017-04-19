@@ -1,0 +1,51 @@
+#container {
+	width: 650px;
+	height: 490px;
+	margin: 0 auto;
+}
+
+#green {
+	/* this doesn't add up either */
+	width: 627px;
+	height: 150px;
+	background-color: green;
+	margin: 10px 10px 5px 10px;
+	display: inline-block;
+}
+
+#photo1, #photo2, #photo3 {
+	background-image: url("http://www.lorempixel.com/200/150");
+	width: 200px;
+	height: 150px;
+	margin: 5px;
+	display: inline-block;
+}
+
+#photo1 {
+	margin-left: 10px;
+}
+
+#photo3 {
+	margin-right: 10px;
+}
+
+#orange, #red, #blue {
+	width: 200px;
+	height: 150px;
+	margin: 5px;
+	display: inline-block;
+}
+
+#orange {
+	background-color: orange;
+	margin-left: 10px;
+}
+
+#red {
+	background-color: red;
+}
+
+#blue {
+	background-color: blue;
+	margin-right: 10px;
+}

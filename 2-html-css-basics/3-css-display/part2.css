@@ -4,30 +4,28 @@
 }
 
 .red-sm {
-	width: 25%;
+	width: 150px;
 	height: 150px;
 	float: left;
-	margin: 2%;
+	margin: 5px 5px 5px 10px;
 	background-color: red;
-	border: 2px solid black;
 }
 
 .blue-md {
-	width: 65%;
+	width: 440px;
 	height: 150px;
-	float: right;
-	margin: 2%;
+	float: left;
+	margin: 5px 10px 5px 5px;
 	background-color: blue;
-	border: 2px solid black;
 }
 
 .yel-lg {
 	clear: both;
-	width: 95%;
+	display: inline-block;
+	width: 600px;
 	height: 150px;
-	margin: 2.5%;
+	margin: 5px 10px 10px 10px;
 	background-color: yellow;
-	border: 2px solid black;
 }
 
 

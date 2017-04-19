@@ -153,6 +153,24 @@ multiply(2,2); // 4
 divide(2,2); // 1
 ~~~~
 
+~~~~
+function add(x, y) {
+	return x + y;
+}
+
+function subtract(m, n) {
+	return m - n;
+}
+
+function multiply(a, b) {
+	return a * b;
+}
+
+function divide(u, v) {
+	return u / v;
+}
+~~~~
+
 ### 2. Write a function called sayHello that takes in a string as a parameter. If the parameter passed to the function is your first name, it should return "Hello Boss", but if the parameter passed to the function is any other name, it should return the string "Hello" and the name parameter.
 
 ~~~~
@@ -160,6 +178,16 @@ divide(2,2); // 1
 sayHello("Tim"); // "Hello Boss"
 sayHello("Janey"); // "Hello Janey"
 sayHello("Elie"); // "Hello Elie"
+~~~~
+
+~~~~
+function sayHello(str) {
+	if (str.toLowerCase() === "shriya") {
+		return "Hello Boss";
+	} else {
+		return "Hello " + str;
+	}
+}
 ~~~~
 
 ### 3. Write a function called average which accepts an array as a parameter. The function should return the average of all of the numbers in the array (you can assume that the array passed to the function will contain only numbers)
@@ -170,7 +198,17 @@ average([1,2,3,4,5,6]); // 3.5
 average([10,20]); // 15
 ~~~~
 
-### 4. Write a function called createStudent, which accepts two parameters both of which are strings. The function should return an object with the keys firstName and lastName and the values should be each of the
+~~~~
+function average(arr) {
+	var sum = 0;
+	for(var i = 0; i < arr.length; i++) {
+		sum = sum + arr[i];
+	}
+	return sum/arr.length;
+}
+~~~~
+
+### 4. Write a function called createStudent, which accepts two parameters both of which are strings. The function should return an object with the keys firstName and lastName and the values should be each of the parameters.
 
 ~~~~
 createStudent("Elie", "Schoppik");
@@ -187,6 +225,16 @@ createStudent("Tim", "Garcia");
     lastName: "Garcia"
 }
 */
+~~~~
+
+~~~~
+function createStudent(first, last) {
+	var studentObj = {
+		firstName: first,
+		lastName: last
+	}
+	return studentObj;
+}
 ~~~~
 
 ### 5. Using your createStudent function, create three students and save them each in a variable. Then create a variable called students, which is an array that will store your three students
@@ -212,6 +260,17 @@ findStudentByFirstName('TIM') // true
 findStudentByFirstName('MMMaaaTTTtttTTT') // false
 ~~~~
 
+~~~~
+function findStudentByFirstName(str) {
+	for (var i = 0; i < students.length; i++) {
+			if (str.toLowerCase() === students[i].firstName.toLowerCase()) {
+			return true;
+		} 
+	}
+	return false;
+}
+~~~~
+
 ### 7. Write a function called extractEveryThird which accepts an array as a parameter. The function should iterate over the array and return a new array with every 3rd element in the array passed to the function.
 
 ~~~~
@@ -219,6 +278,18 @@ extractEveryThird([1,2,3]); // [3]
 extractEveryThird([1,2,3,4,5,6]); // [3,6]
 extractEveryThird(["a","b","c","d"]); // ["c"]
 extractEveryThird(["first value", "second value", "third value"]); // ["third value"]
+~~~~
+
+~~~~
+function extractEveryThird(arr) {
+	var newArr = [];
+	for (var i = 0; i < arr.length; i++) {
+		if ((i + 1) % 3 === 0) {
+			newArr = newArr.concat(arr[i]);
+		}
+	}
+	return newArr;
+}
 ~~~~
 
 ### 8. Write a function called countEvensAndOdds which accepts an array as a parameter. This function should return an object with the count of even numbers and the count of odd numbers. The object returned should have the keys oddCount and evenCount.
@@ -240,6 +311,23 @@ countEvensAndOdds([1,2,3,4,5,6,7]);
 */
 ~~~~
 
+~~~~
+function countEvensAndOdds(arr) {
+	var obj = {
+		oddCount: 0,
+		evenCount: 0
+	}
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] % 2 === 0) {
+			obj.evenCount = obj.evenCount + 1;
+		} else {
+			obj.oddCount = obj.oddCount + 1;
+		}
+	}
+	return obj;
+}
+~~~~
+
 ### 9. In the following example, what will be printed in the console? Make sure you first try read this code before pasting it into the console :)
 
 ~~~~
@@ -255,10 +343,15 @@ console.log(myVar);
 var tricky = "Hello from global";
 
 function trickyScopePractice() {
-    tricky = "Hello from function scope";
+    tricky = "Hello from function scope"; 
 }
 
-console.log(tricky);
+console.log(tricky); // we didn't call trickyScopePractice()
+~~~~
+
+~~~~
+Hello from global
+Hello from global
 ~~~~
 
 ### 10. Write a function called onlyCapitalLetters which accepts a string and returns a new string with only the capital letters passed to the string.
@@ -268,6 +361,31 @@ onlyCapitalLetters("Amazing") // "A"
 onlyCapitalLetters("nothing") // ""
 onlyCapitalLetters("EVERYTHING") // "EVERYTHING"
 ~~~~
+
+function onlyCapitalLetters(str) {
+	var returnStr = "";
+	for (var i = 0; i < str.length; i++) {
+		if (str[i].toUpperCase() === str[i]) {
+			returnStr = returnStr + str[i];
+		}
+	}
+	return returnStr;
+}
+
+# { Anonymous Functions and IIFEs. }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

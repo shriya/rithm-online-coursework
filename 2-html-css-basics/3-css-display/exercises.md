@@ -20,13 +20,13 @@ in part2.html & part2.css - done
 
 _Write the necessary HTML and CSS to create the following layout. You can use floats, positioning or flexbox to solve these challenges._
 
-in part3.html & part3.css - not done
+in part3.html & part3.css - done
 
 ## Part IV
 
 _Write the necessary HTML and CSS to create the following layout. You can use floats, positioning or flexbox to solve these challenges._
 
-in part4.html & part4.css - not done
+in part4.html & part4.css - done
 
 ### Flexbox
 

@@ -13,26 +13,30 @@ body {
 
 #wrap {
 	width: 800px;
-	height: 600px;
+	height: 408px;
 	margin: 0 auto;
 }
 
 #nav {
 	float: left;
 	width: 20%;
-	height: 68%;
+	height: 100%;
 	padding: 10px;
-	margin-right: 10px;
 	background-color: #b1d0fd;
 }
 
 #content {
+	float: left;
 	background-color: #5d80bb;
-	padding-top: 10px;
+	padding: 10px;
 	text-align: center;
+	height: 100%;
+	width: 75%;
 }
 
 .copyright {
+	margin-top: 2px;
 	background-color: #374570;
+	padding: 2px;
 }
 
