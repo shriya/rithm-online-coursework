@@ -19,7 +19,7 @@
     * _(done exc. flexbox exercises)_ CSS Display
 * Intermediate CSS & Twitter Bootstrap
     * _(done)_ Transitions, Transforms, and Animations
-    * Responsive Design
+    * _(done)_ Responsive Design
     * Twitter Bootstrap
     * Deploying Static Websites
 * Javascript Fundamentals 

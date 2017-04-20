@@ -11,7 +11,7 @@
 
 ### 4-js / 3-js / { Hoisting }
 
-* this is supposed to throw and error but in my chrome console, but for me, it did not
+* this is supposed to throw and error but in my chrome console, but for me, it did not:
 
 ~~~~
 sayHi("Matt"); // Throws an error!
