@@ -21,7 +21,7 @@
     * _(done)_ Transitions, Transforms, and Animations
     * _(done)_ Responsive Design
     * _(done)_ Twitter Bootstrap
-    * Deploying Static Websites
+    * _(done exc. Amazon S3)_ Deploying Static Websites
 * Javascript Fundamentals 
     * _(done)_ Javascript Introduction 
     * _(done)_ Javascript Arrays
