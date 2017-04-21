@@ -29,9 +29,11 @@
     * _(done)_ Javascript Functions
 * Intermediate Javascript Part I
 	* _(done)_ Debugging Javascript
-	* Nested Data Structures
+	* _(done)_ Nested Data Structures
 	* Higher Order Functions, Timers, and Closures
 	* Document Object Model
+    * Events & LocalStorage
+    * Final Project
 * Intermediate Javascript Part II _(Exercises not due Day 1)_
 	* Intro to jQuery
 	* Intermediate jQuery
