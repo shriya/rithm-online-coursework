@@ -28,7 +28,7 @@
     * _(done)_ Javascript Objects
     * _(done)_ Javascript Functions
 * Intermediate Javascript Part I
-	* Debugging Javascript
+	* _(done)_ Debugging Javascript
 	* Nested Data Structures
 	* Higher Order Functions, Timers, and Closures
 	* Document Object Model
