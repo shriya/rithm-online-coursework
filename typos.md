@@ -8,8 +8,8 @@
 
 * last two exercises don't have a ; at the end of line sayHi()
 
+[JS Nested Objects](https://www.rithmschool.com/courses/intermediate-javascript/javascript-nested-data-structures-objects)
 
-
-
+* removeDetail should return the detailsObject, not the valueToBeRemoved (as per your instructions)
 
 
