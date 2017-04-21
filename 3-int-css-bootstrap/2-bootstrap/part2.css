@@ -1,0 +1,13 @@
+.navbar {
+	border-radius: 0;
+}
+
+.alert {
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	-webkit-border-radius: 0px !important;
+	border-collapse: collapse !important;
+	background-image: none !important;
+	margin: 0;
+}

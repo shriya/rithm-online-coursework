@@ -20,7 +20,7 @@
 * Intermediate CSS & Twitter Bootstrap
     * _(done)_ Transitions, Transforms, and Animations
     * _(done)_ Responsive Design
-    * Twitter Bootstrap
+    * _(done)_ Twitter Bootstrap
     * Deploying Static Websites
 * Javascript Fundamentals 
     * _(done)_ Javascript Introduction 
@@ -32,7 +32,7 @@
 	* Nested Data Structures
 	* Higher Order Functions, Timers, and Closures
 	* Document Object Model
-* Intermediate Javascript Part II (Exercises not due Day 1)
+* Intermediate Javascript Part II _(Exercises not due Day 1)_
 	* Intro to jQuery
 	* Intermediate jQuery
 	* How the Web Works
