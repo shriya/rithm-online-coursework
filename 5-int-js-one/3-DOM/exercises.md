@@ -1,6 +1,6 @@
-# { Introduction to the DOM. }
+# { DOM Exercises. }
 
-
+In `index.html`
 
 
 
