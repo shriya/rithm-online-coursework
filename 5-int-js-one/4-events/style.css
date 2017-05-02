@@ -26,3 +26,21 @@ input {
 	padding: 5px;
 	margin: 5px;
 }
+
+.panel {
+	padding: 10px;	
+	border-width: 0px;
+	background-color: #fffff4;
+}
+
+ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.glyphicon-remove:hover {
+	cursor: pointer;
+	color: red;
+	transition: 0.5s;
+	transform: rotateY(180deg);
+}

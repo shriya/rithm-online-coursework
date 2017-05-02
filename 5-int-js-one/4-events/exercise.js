@@ -4,32 +4,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var ul = document.querySelector("ul");
 
-	// make new span with X
-	var xOut = document.createElement("span");
-	xOut.classList.add("glyphicon","glyphicon-remove","pull-right");
-
 	submit.addEventListener("click", function (e) {
 		// don't let page reload
 		e.preventDefault();
 
-		
-		var newItem = document.createElement("li");
-
 		// make new item on list with input text on click
+		var newItem = document.createElement("li");
+		newItem.classList.add("panel", "panel-default");
 		newItem.innerText = document.querySelector("input").value;
-		// add span with X to remove to list item
+
+		// make new span with X on the right side of the panel
+		var xOut = document.createElement("span");
+		xOut.classList.add("glyphicon","glyphicon-remove","pull-right");
+
+		// add span with X to remove to list item, add list item to list
 		newItem.appendChild(xOut);
-
-		// set form to add back to default text
-		document.querySelector("input").value = "";
-
 		ul.appendChild(newItem);
+
+		// set form to add back to default input text ("empty")
+		document.querySelector("input").value = "";
 	})
 
+	// if user clicks on an item, it's completed and crossed out
 	ul.addEventListener("click", function(e) {
-		e.target.innerHTML = e.target.innerHTML.strike();
-	})
-
+		if (e.target.tagName.toLowerCase() === "li") {
+			e.target.style.textDecoration = "line-through";
+		} else if (e.target.tagName.toLowerCase() === "span") {
+			e.target.parentNode.remove();
+		}
+	});
 
 
 });
