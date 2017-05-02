@@ -1,0 +1,28 @@
+body {
+	font-family: "Roboto", sans-serif;
+
+}
+
+.container {
+	margin: 0 auto;
+	width: 500px;
+	background-color: #ffffcc;
+	color: #000033;
+	min-height: 400px;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	font-size: 18px;
+	padding: 15px;
+	margin: 15px;
+	background-color: #fffff4;
+}
+
+input {
+	padding: 5px;
+	margin: 5px;
+}
