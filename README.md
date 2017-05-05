@@ -36,7 +36,7 @@
     * Final Project
 * 6 Intermediate Javascript Part II
 	* _(done)_ Intro to jQuery
-	* Intermediate jQuery
+	* _(done exc. Part 1 refactor & Part 2 Bonus)_ Intermediate jQuery
 	* How the Web Works
 	* AJAX with jQuery
 	* Javascript Iterators

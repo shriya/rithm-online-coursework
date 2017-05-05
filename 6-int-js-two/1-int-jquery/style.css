@@ -1,0 +1,15 @@
+table {
+	width: 90%;
+}
+
+form {
+	padding: 25px;
+}
+
+.form-group {
+	margin: 0 10px 0 10px;
+}
+
+h1 {
+	text-align: center;
+}
