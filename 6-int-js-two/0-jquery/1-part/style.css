@@ -1,0 +1,13 @@
+.container {
+	padding-bottom: 50px;
+}
+
+img {
+	max-width: 70%;
+}
+
+.image-center {
+	display: block;
+	margin: 20px auto;
+	background: lightYellow;
+}

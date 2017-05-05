@@ -33,6 +33,4 @@ document.addEventListener("DOMContentLoaded", function() {
 			e.target.parentNode.remove();
 		}
 	});
-
-
 });

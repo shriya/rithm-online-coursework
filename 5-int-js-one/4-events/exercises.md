@@ -4,6 +4,10 @@
 
 In index.html and script.js
 
-## Part 3 & Part 4
+## Part 3
 
 In todo.html and exercise.js
+
+## Part 4 (LocalStorage)
+
+_(Not done yet)_
