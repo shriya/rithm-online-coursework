@@ -12,4 +12,6 @@
 
 * removeDetail should return the detailsObject, not the valueToBeRemoved (as per your instructions)
 
+[Python Fundamentals](https://www.rithmschool.com/courses/python-fundamentals-part-1/introduction-to-python-variables-and-primitives)
 
+* endswith examples should return # True and # False, not # True and # Foo

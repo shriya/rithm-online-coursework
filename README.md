@@ -76,9 +76,9 @@
     * Events, Forms, Refs, and Life Cycle
     * Final Project
 * 13 Python Fundamentals I
-    * Python Introduction
-    * Python Lists
-    * Python Dictionaries
+    * _(done)_ Python Introduction
+    * _(done exc. last two codewars probs)_ Python Lists
+    * _(done)_ Python Dictionaries
     * Python Functions
     * Debugging and Modules
 * 14 Python Fundamentals II
@@ -87,61 +87,3 @@
     * Generators, Iterators and Decorators
     * Web Scraping and Server Side Requests
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
