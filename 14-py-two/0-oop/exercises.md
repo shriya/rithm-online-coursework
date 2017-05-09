@@ -22,11 +22,23 @@ for card in d:
     print(card)
 ```
 
-done
+done (in file)
 
 ##### 2. Create a decorator called `log` that will print the name of the function being invoked and the arguments to that function
 
-done
+done (in file)
+
+```
+def log(fun):
+    def inner(*args):
+        if len(args) > 0: 
+            fun_args = " ".join([str(x) for x in args])
+        else:
+            fun_args = ""
+        print("running the function '{}' returned '{}'".format(fun.__name__, fun_args))
+        return fun(*args)
+    return inner
+```
 
 ##### 3.  Read ahead to file IO.  Change your log function so that rather than printing, log with write the information to a file called deck.log
 
@@ -36,12 +48,34 @@ so in your class, you should be able to do something like this:
 def shuffle(self):
 ```
 
+```
+import csv
 
+def log(fun):
+    def inner(*args):
+        if len(args) > 0: 
+            fun_args = " ".join([str(x) for x in args])
+        else:
+            fun_args = ""
+        with open('deck.log', 'a') as file:
+            file.write("running the function '{}' returned '{}'".format(fun.__name__, fun_args))
+        return fun(*args)
+    return inner
+```
 
 ##### 4. Make your Deck saveable.  Save contents (and the order) of your deck of cards to a CSV file.
- 
 
+done (in file)
 
 ##### 5. Load your deck from a CSV file
 
 You should be able to kill your program after doing a save.  Start it up again and do a load and have the same deck of cards in the same order
+
+done (in file)
+
+
+
+
+
+
+

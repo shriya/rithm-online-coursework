@@ -1,4 +1,5 @@
 import random
+import csv
 
 def log(fun):
     def inner(*args):
@@ -6,7 +7,8 @@ def log(fun):
             fun_args = " ".join([str(x) for x in args])
         else:
             fun_args = ""
-        print("running the function '{}' returned '{}'".format(fun.__name__, fun_args))
+        with open('deck.log', 'a') as file:
+            file.write("running the function '{}' returned '{}'".format(fun.__name__, fun_args))
         return fun(*args)
     return inner
 
@@ -18,7 +20,7 @@ class Card:
     def __str__(self):
         return "{}, {}".format(self.suit, self.value)
 
-class Deck: 
+class Deck:
 
     def __init__(self):
         suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
@@ -40,6 +42,18 @@ class Deck:
             self.i += 1
             return self.cards[self.i - 1]
 
+    def save(self):
+        with open('curr_deck.txt', 'w') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow([str(card) for card in self.cards])
+
+    def load(self):
+        with open('curr_deck.txt', 'r') as csvfile:
+            reader = csv.reader(csvfile)
+            cards_list = list(reader)
+            for i in cards_list:
+                self.cards.append(i)
+
     @log
     def deal(self):
         if len(self.cards) == 0:
@@ -55,8 +69,15 @@ class Deck:
 
 my_deck = Deck()
 
+# my_deck.save()
+
+my_deck.load()
+print(my_deck.cards[4])
+
+
+
 # for card in my_deck:
 #     print(card)
 
-my_deck.deal()
+# my_deck.deal()
 
