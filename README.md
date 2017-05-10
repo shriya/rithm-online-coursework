@@ -77,13 +77,13 @@
     * Final Project
 * 13 Python Fundamentals I
     * _(done)_ Python Introduction
-    * _(done exc. last two codewars probs)_ Python Lists
+    * _(done)_ Python Lists
     * _(done)_ Python Dictionaries
     * Python Functions
     * Debugging and Modules
 * 14 Python Fundamentals II
     * Object Oriented Programming with Python
-    * File IO
+    * File I/O
     * Generators, Iterators and Decorators
-    * Web Scraping and Server Side Requests
+    * _(part 1 out of 3 done)_ Web Scraping and Server Side Requests
 

@@ -72,6 +72,8 @@ my_deck = Deck()
 # my_deck.save()
 
 my_deck.load()
+
+# trying to check if it's the same...? not sure this makes sense; i save it in a file and load from that file and check that it's the same file...of course it is....
 print(my_deck.cards[4])
 
 

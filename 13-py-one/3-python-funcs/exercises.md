@@ -9,7 +9,10 @@ difference(2,2) # 0
 difference(0,2) # -2
 ```
 
-
+```
+def difference(a,b):
+    return a - b
+```
 
 ### 2. product
 
@@ -18,6 +21,11 @@ this function takes in two parameters and returns the product of the two
 ```
 product(2,2) # 4
 product(0,2) # 0
+```
+
+```
+def product(a,b):
+    return a*b
 ```
 
 ### print_day
@@ -29,6 +37,15 @@ print_day(4) # "Wednesday"
 print_day(41) # None
 ```
 
+```
+def day(n):
+    if n < 1 or n > 7:
+        return None
+    else:
+        week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        return week[n - 1]
+```
+
 ### last_element
 
 this function takes in one parameter (a list) and returns the last value in the list. It should return None if the list is empty.
@@ -36,6 +53,14 @@ this function takes in one parameter (a list) and returns the last value in the 
 ```
 last_element([1,2,3,4]) # 4
 last_element([]) # None
+```
+
+```
+def last_element(l):
+    if len(l) < 1:
+        return None
+    else:
+        return l[-1]
 ```
 
 ### number_compare
@@ -48,6 +73,16 @@ number_compare(1,2) # "First is greater"
 number_compare(2,1) # "Second is greater"
 ```
 
+```
+def number_compare(a,b):
+    if a > b:
+        return "First is greater"
+    elif b > a:
+        return "Second is greater"
+    elif a == b:
+        return "Numbers are equal"
+```
+
 ### single_letter_count
 
 this function takes in two parameters (two strings). The first parameter should be a word and the second should be a letter. The function returns the number of times that letter appears in the word. The function should be case insensitive (does not matter if the input is lowercase or uppercase). If the letter is not found in the word, the function should return 0.
@@ -57,6 +92,11 @@ single_letter_count('amazing','A') # 2
 single_letter_count('amazing','A') # 2
 ```
 
+```
+def single_letter_count(str, char):
+    return len([i for i in range(0, len(str)) if str[i].lower() == char.lower()])
+```
+
 ### multiple_letter_count
 
 this function takes in one parameter (a string) and returns a dictionary with the keys being the letters and the values being the count of the letter.
@@ -64,6 +104,11 @@ this function takes in one parameter (a string) and returns a dictionary with th
 ```
 multiple_letter_count("hello") # {h:1, e: 1, l: 2, o:1}
 multiple_letter_count("person") # {p:1, e: 1, r: 1, s:1, o:1, n:1}
+```
+
+```
+def multiple_letter_count(str):
+    return {str[i]:str.count(str[i]) for i in range(len(str))}
 ```
 
 ### list_manipulation
@@ -81,6 +126,22 @@ list_manipulation([1,2,3], "add", "beginning", 20) # [20,1,2,3]
 list_manipulation([1,2,3], "add", "end", 30) # [1,2,3,30]
 ```
 
+```
+def list_manipulation(list, command, location, value=0):
+    if command == "remove":
+        if location == "beginning":
+            return list.pop(0)
+        if location == "end":
+            return list.pop()
+    if command == "add":
+        if location == "beginning":
+            list.insert(0, value)
+            return list
+        if location == "end":
+            list.append(value)
+            return list
+```
+
 ### is_palindrome
 
 A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This function should take in one parameter and returns True or False depending on whether it is a palindrome. As a bonus, allow your function to ignore whitespace and capitalization so that is_palindrome('a man a plan a canal Panama') returns True.
@@ -92,6 +153,13 @@ is_palindrome('hannah') # True
 is_palindrome('robert') # False
 ```
 
+```
+def is_palindrome(str): 
+    if str == str[::-1]:
+        return True
+    return False
+```
+
 ### frequency
 
 This function accepts a list and a search_term (this will always be a primitive value) and returns the number of times the search_term appears in the list.
@@ -101,11 +169,20 @@ frequency([1,2,3,4,4,4], 4) # 3
 frequency([True, False, True, True], False) # 1
 ```
 
+```
+def frequency(l, v):
+    return len([value for value in l if value == v])
+```
+
 ### flip_case
 
 This function accepts a string and a letter and reverses the case of all occurances of the letter in the string.
 
 `flip_case("Hardy har har", "h") # "hardy Har Har"`
+
+```
+
+```
 
 ### multiply_even_numbers
 
@@ -113,11 +190,19 @@ This function accepts a list of numbers and returns the product of all even numb
 
 `multiply_even_numbers([2,3,4,5,6]) # 48`
 
+```
+
+```
+
 ### mode
 
 This function accepts a list of numbers and returns the most frequent number in the list of numbers. You can assume that the mode will be unique.
 
 `mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4`
+
+```
+
+```
 
 ### capitalize
 
@@ -128,11 +213,19 @@ capitalize("tim") # "Tim"
 capitalize("matt") # "Matt"
 ```
 
+```
+
+```
+
 ### compact
 
 This function accepts a list and returns a list of values that are truthy values.
 
 `compact([0,1,2,"",[], False, {}, None, "All done"]) # [1,2, "All done"]`
+
+```
+
+```
 
 ### partition
 
@@ -145,11 +238,19 @@ def is_even(num):
 partition([1,2,3,4], is_even) # [[2,4],[1,3]]
 ```
 
+```
+
+```
+
 ### intersection
 
 This function should accept a two dimensional list and return a list with the values that are the same in each list.
 
 `intersection([1,2,3], [2,3,4]) # [2,3]`
+
+```
+
+```
 
 ### once
 
@@ -166,6 +267,10 @@ one_addition(2,2) # undefined
 one_addition(12,200) # undefined
 ```
 
+```
+
+```
+
 ## Super bonus
 
 Research what decorators are and refactor your once code to use a decorator so that you can run
@@ -179,6 +284,12 @@ add(2,2) # 4
 add(2,20) # None
 add(12,20) # None
 ```
+
+```
+
+```
+
+
 
 
 

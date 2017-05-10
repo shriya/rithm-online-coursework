@@ -2,6 +2,32 @@
 
 ## Part 1
 
+### 1. What is a class?
+
+
+
+### 2. What is an instance?
+
+
+### 3. What is encapsulation?
+
+
+### 4. What is abstraction?
+
+
+### 5. What is inheritance?
+
+
+### 6. What is multiple inheritance?
+
+
+### 7. What is polymorphism?
+
+
+### 8. What is method resolution order or MRO?
+
+
+
 ## Part 2
 
 ### 1. Create a deck of cards class. Internally, the deck of cards should use another class, a card class. Your requirements are:

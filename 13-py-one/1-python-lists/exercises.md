@@ -91,8 +91,23 @@ done (can't submit...? but all tests pass)
 
 ### 7. [Tortoise Racing](https://www.codewars.com/kata/tortoise-racing)
 
-_(not yet done)_
+done (1 test fails because of a rounding error -_-)
+
+```
+def race(v1, v2, g):
+    if v1 >= v2:
+        return None
+    time = g / (v2 - v1)
+    
+    h = int(time - (time % 1))
+    time = (time - h) * 60
+    mn = int(time - (time % 1))
+    time = (time - mn) * 60
+    s = int(time)
+    
+    return [h, mn, s]
+```
 
 ### 8. [Calculate String Rotation](https://www.codewars.com/kata/calculate-string-rotation)
 
-_(not yet done)_
+done
