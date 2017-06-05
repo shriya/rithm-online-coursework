@@ -4,12 +4,16 @@ import bs4
 r = requests.get('https://news.google.com')
 soup = bs4.BeautifulSoup(r.text, "html.parser")
 
-titles = soup.select("span.titletext")
+all_headlines = soup.select(".esc-diversity-article-wrapper a")
 
-# print(titles)
+# title_list = [title.select("span.titletext") for title in all_headlines]
 
-# for title in titles:
-#     print("{} \n".format(title.text))
+title_list = [title.select("span.titletext")[0].text for title in all_headlines]
+url_list = [url["href"] for url in all_headlines]
+
+# titles = soup.select("span.titletext")
+# urls = soup.select(".esc-diversity-article-wrapper a")
+# url_list = [url["href"] for url in urls]
 
 # Then, write a function called find_headline_by_keyword which lets you search through those headlines for keywords, and returns to you a list of all of the headlines that match all the keywords you provide.
 
