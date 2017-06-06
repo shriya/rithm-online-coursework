@@ -1,0 +1,10 @@
+extends ../base.pug
+
+block content
+  form(action="/eaters", method="POST")
+    label(for="name") Name:
+    input(type="text", name="eater[name]", id="name")
+    label(for="favoriteTopping") Favorite Topping:
+    input(type="text", name="eater[favoriteTopping]", id="favoriteTopping")
+    input(type="submit", value="Add an eater!")
+        

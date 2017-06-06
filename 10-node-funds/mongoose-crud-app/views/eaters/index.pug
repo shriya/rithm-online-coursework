@@ -1,0 +1,11 @@
+extends ../base.pug
+
+block content
+  a(href="/eaters/new") Add a new eater
+  h1 See all the eaters!
+  each eater in eaters
+    p
+      span #{eater.name} : #{eater.favoriteTopping} &nbsp;
+      a(href=`/eaters/${eater.id}/edit`) Edit an eater!
+      a(href=`/eaters/${eater.id}/tacos`) See your tacos!
+      

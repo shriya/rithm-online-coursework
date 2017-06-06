@@ -1,0 +1,13 @@
+extends ../base.pug
+
+block content
+  form(action=`/eaters/${eater.id}?_method=PATCH`, method="POST")
+    label(for="name") Name:
+    input(type="text", name="eater[name]", value=eater.name, id="name")
+    label(for="favoriteTopping") Favorite Topping:
+    input(type="text", name="eater[favoriteTopping]", value=eater.favoriteTopping, id="favoriteTopping")
+    input(type="submit", value="Edit an eater!")
+
+  form(action=`/eaters/${eater.id}?_method=DELETE`, method="POST")
+    input(type="submit", value="X")
+

@@ -1,0 +1,10 @@
+extends ../base.pug
+
+block content
+  form(action=`/eaters/${eater.id}/tacos`, method="POST")
+    label(for="name") Name:
+    input(type="text", name="taco[name]", id="name")
+    label(for="numToppings") Number of Toppings:
+    input(type="number", name="taco[numToppings]", id="numToppings")
+    input(type="submit", value="Add a taco")
+        
