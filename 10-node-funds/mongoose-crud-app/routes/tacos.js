@@ -23,7 +23,7 @@ router.post('/', function(req,res,next){
   db.Taco.create(newTaco).then(function(taco){
     db.Eater.findById(req.params.eater_id).then(function(eater){
       eater.tacos.push(taco.id)
-      eater.save().then(function(eater){
+      eater.save().then(function(){
         res.redirect(`/eaters/${eater.id}/tacos`)
       })
     })
@@ -32,6 +32,44 @@ router.post('/', function(req,res,next){
   })
 })
 
+router.get('/:taco_id', function(req, res, next) {
+  db.Taco.findById(req.params.taco_id).then(function(taco) {
+    res.render('tacos/show', {taco})
+  })
+}, function(err) {
+  next(err)
+})
 
+router.get('/:taco_id/edit', function(req, res, next) {
+  db.Taco.findById(req.params.taco_id).then(function(taco) {
+    res.render('tacos/edit', {taco})
+  })
+}, function(err) {
+  next(err)
+})
+
+router.patch('/:taco_id', function(req, res, next) {
+  db.Taco.findByIdAndUpdate(req.params.taco_id, req.body.taco).then(function(taco) {
+    res.redirect(`/eaters/${taco.eater}/tacos`)
+  })
+}, function(err) {
+  next(err)
+})
+
+router.delete('/:taco_id', function(req, res, next) {
+  db.Taco.findByIdAndRemove(req.params.taco_id).then(function(taco) {
+    db.Eater.findById(taco.eater).then(function(eater) {
+      eater.tacos.remove(taco.id)
+      eater.save().then(function() {
+        res.redirect(`/eaters/${taco.eater}/tacos`)
+      })
+    })
+  })
+}, function(err) {
+  next(err)
+})
 
 module.exports = router;
+
+
+

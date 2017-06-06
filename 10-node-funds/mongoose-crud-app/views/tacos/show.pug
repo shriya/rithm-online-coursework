@@ -1,0 +1,6 @@
+extends ../base.pug
+
+block content
+    p #{taco.name} / #{taco.numToppings} 
+
+    a(href=`/eaters/${taco.eater}/tacos`) Go back to all tacos

@@ -2,7 +2,16 @@
 html(lang="en")
 head
     meta(charset="UTF-8")
-    title Document
+    link(rel='stylesheet', href='/css/style.css', type='text/css' )
+    link(href="https://fonts.googleapis.com/css?family=Merriweather", rel="stylesheet")
+    title Tacqueria Ritmo
 body
-    block content
+    div(class='nav') 
+        div(class='picture')
+            img(src='/img/tacos-pic.png', alt='tacos picture')
+        div(class='inner')    
+            h2(class='title') Tacqueria Ritmo
+    
+    div(class='container')
+        block content
     

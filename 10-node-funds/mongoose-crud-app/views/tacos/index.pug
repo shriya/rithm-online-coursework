@@ -3,5 +3,12 @@ extends ../base.pug
 block content
   h1 See all the tacos for #{eater.name}
   each taco in eater.tacos
-    p #{taco.name} / #{taco.numToppings}
+    p #{taco.name} / #{taco.numToppings} &nbsp;
+        a(href=`/eaters/${eater.id}/tacos/${taco.id}/edit`) Edit this taco! &nbsp;
+            a(href=`/eaters/${eater.id}/tacos/${taco.id}`) View this taco!
+
+  p
+    a(href=`/eaters/${eater.id}/tacos/new`) Add new taco!  
+  p
+    a(href=`/eaters`) Go back to all users 
     

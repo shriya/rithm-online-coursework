@@ -1,0 +1,12 @@
+extends ../base.pug
+
+block content
+  form(action=`/eaters/${taco.eater.id}/tacos/${taco.id}?_method=PATCH`, method="POST")
+    label(for="name") Name:
+    input(type="text", name="taco[name]", id="name", value=taco.name)
+    label(for="numToppings") Number of Toppings:
+    input(type="number", name="taco[numToppings]", id="numToppings", value=taco.numToppings)
+    input(type="submit", value="Update taco")
+
+  form(action=`/eaters/${taco.eater.id}/tacos/${taco.id}?_method=DELETE`, method="POST")
+    input(type="submit", value="X")

@@ -46,13 +46,51 @@ router.patch('/:id', function(req,res,next){
   })
 })
 
+// router.delete('/:id', function(req,res,next){
+//   db.Eater.findByIdAndRemove(req.params.id).then(function(eater){
+//     eval(require("locus"))
+//     eater.tacos.forEach(function(cur){
+//       db.Tacos.findByIdAndRemove(cur)
+//     })
+//     res.redirect('/eaters')
+//   }, function(err){
+//     next(err)
+//   })
+// })
+
+// router.delete('/:id', function(req,res,next){
+//   db.Eater.findByIdAndRemove(req.params.id).then(function(eater){
+//     // eval(require("locus"))
+//     var promiseArr = eater.tacos.map(function(cur){
+//       new Promise(function(resolve, reject){ 
+//         db.Tacos.findByIdAndRemove(cur)
+//       });
+//       return resolve;
+//     });
+//     locus
+//     Promise.all(promiseArr).then(function(){
+//       res.redirect('/eaters')
+//     })
+//   }, function(err){
+//     next(err)
+//   })
+// })
+
 router.delete('/:id', function(req,res,next){
-  db.Eater.findByIdAndRemove(req.params.id).then(function(){
-    res.redirect('/eaters')
+  db.Eater.findByIdAndRemove(req.params.id).then(function(eater){
+    eater.tacos.remove({}).then(function() {
+      res.redirect('/eaters')
+    })
   }, function(err){
     next(err)
   })
 })
 
 module.exports = router;
+
+
+
+
+
+
 
