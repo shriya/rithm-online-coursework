@@ -14,4 +14,4 @@ var tacoSchema = new mongoose.Schema({
 
 var Taco = mongoose.model('Taco', tacoSchema);
 
-module.exports = Taco
+module.exports = Taco;
