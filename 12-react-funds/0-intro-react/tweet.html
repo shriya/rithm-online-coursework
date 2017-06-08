@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        .header {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        .tweet {
+            font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
             width: 500px;
             padding: 20px 20px 10px 20px;
@@ -15,35 +15,38 @@
             border: 3px solid #F3F3F3;
         }
 
-        .header h1,h2,h3 {
+        .tweet h1,h2,h3 {
             letter-spacing: 1px;
             display: inline;
-            padding-right: 10px;
+            margin-right: 10px;
             font-size: 18px;
         }
 
-        .header h1 {
+        .tweet h1 {
             color: #1FD9D1;
             font-weight: bold;
         }
 
-        .header h2 {
-            
+        .tweet h2 {
+            font-weight: normal;
         }
 
-        .header h3 {
+        .tweet h3 {
             color: #A1A1A1;
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 14px;
         }
 
-        
     </style>
 </head>
 <body>
     <div id="app"></div>
     <script src="https://unpkg.com/react@15/dist/react.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    
     <script>
-
         // React is a global from the React library
         var div = React.DOM.div; // let's create a div!
         var h1 = React.DOM.h1; // let's create an h1!
@@ -53,9 +56,9 @@
         var h3 = React.DOM.h3; // let's create an h1!
 
         class Tweet extends React.Component {
-            render() {
+           render() {
                 return div(
-                        {className: "header"},
+                        {className: "tweet"},
                         span(null, 
                             h1(null, this.props.name),
                             h2(null, "@" + this.props.username),
@@ -77,7 +80,10 @@
 
         // lets put this on the DOM
         ReactDOM.render(App, document.getElementById("app"));
+
     </script>
 </body>
 </html>
+
+
 
